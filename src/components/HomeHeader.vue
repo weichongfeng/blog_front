@@ -70,7 +70,12 @@
 
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  methods: {
+    handleBtnClick: function () {
+      console.log(this.$router)
+    }
+  }
 };
 </script>
 
