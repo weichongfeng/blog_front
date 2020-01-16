@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import HomeHeader from "@components/HomeHeader.vue";
-import HomeMask from "@components/HomeMask.vue";
-import HomeMain from "@components/HomeMain.vue";
-import HomeFooter from "@components/HomeFooter.vue";
+import HomeHeader from '@components/HomeHeader.vue';
+import HomeMask from '@components/HomeMask.vue';
+import HomeMain from '@components/HomeMain.vue';
+import HomeFooter from '@components/HomeFooter.vue';
 
 export default {
   name: 'app',
