@@ -54,7 +54,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="/leave_msg/" class="nav-link">GitHub</a>
+            <a href="https://github.com/weichongfeng/" target="_blank" class="nav-link">GitHub</a>
           </li>
           <li class="nav-item">
             <a href="/leave_msg/" class="nav-link">关于</a>

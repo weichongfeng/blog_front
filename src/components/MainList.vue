@@ -22,20 +22,14 @@
       </div>
       <nav class="pagination-nav">
         <div class="pagination-docker">
-          <a
-            href="/"
-            class="pagination-num router-link-exact-active router-link-active pagination-current"
-          >1</a>
-          <a href="/page/2/" class="pagination-num">2</a>
-          <a href="/page/3/" class="pagination-num">3</a>
-          <a href="/page/4/" class="pagination-num">4</a>
-          <a href="/page/5/" class="pagination-num">5</a>
-          <a href="/page/6/" class="pagination-num">6</a>
-          <a href="/page/7/" class="pagination-num">7</a>
-          <a href="/page/8/" class="pagination-num">8</a>
-          <a href="/page/9/" class="pagination-num">9</a>
+          <el-pagination
+            background
+            layout="prev, pager, next"
+            :total="total"
+            :current-page="current_page"
+            >
+          </el-pagination>
         </div>
-        <a href="/page/2/" class="pagination-action pagination-next">→</a>
       </nav>
     </div>
   </div>
@@ -47,7 +41,9 @@ export default {
   name: "MainList",
   data() {
     return {
-      list: []
+      list: [],
+      total: 0,
+      current_page: 0
     };
   },
   computed: {
@@ -63,6 +59,8 @@ export default {
           const data = res.data;
           if (data.ret && data.data) {
             this.list = data.data.data;
+            this.total = data.data.total;
+            this.current_page = data.data.current_page;
           }
         })
         .catch(error => {

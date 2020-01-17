@@ -1046,11 +1046,6 @@
     }
 }
 
-.main {
-    padding: 0 1rem;
-    margin: 0 auto 5rem
-}
-
 .post-list-wrap {
     width: 43rem
 }
@@ -1743,62 +1738,10 @@
     transform: rotate(45deg)
 }
 
-.github-card {
-    text-align: center;
-    max-width: 16rem
-}
-
 .github-card h1 {
     font-size: 24px;
     font-weight: 500;
     text-decoration: none
-}
-
-.github-header {
-    height: 78px;
-    position: relative;
-    padding: 0;
-    margin: 0
-}
-
-.github-header:after {
-    display: inline-block;
-    position: absolute;
-    width: 120px;
-    height: 55px;
-    left: -50px;
-    text-align: center;
-    line-height: 85px;
-    font-size: 13px;
-    top: -15px;
-    color: #fff;
-    transform: rotate(-45deg);
-    content: "开源";
-    background: linear-gradient(90deg, #2de8ae, #2bc0e4)
-}
-
-.user-link {
-    display: inline-block;
-    overflow: hidden;
-    -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
-    background: #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-    text-decoration: none;
-    margin-top: -43px;
-    border: 3px solid #fff;
-    position: relative
-}
-
-.github-avatar {
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    transition: .9s ease-in-out
-}
-
-.github-avatar:hover {
-    transform: rotate(1turn)
 }
 
 .github-info {
@@ -1808,26 +1751,6 @@
     padding: 0;
     border-top: 1px solid #eee;
     zoom: 1
-}
-
-.github-info,
-.github-info a {
-    color: #707070
-}
-
-.github-info strong {
-    display: block;
-    color: #292f33;
-    font-size: 16px;
-    line-height: 1.6
-}
-
-.github-info li {
-    width: 33.33%;
-    float: left;
-    font-size: 12px;
-    padding: 8px 0;
-    box-shadow: 1px 0 0 #eee
 }
 
 .weather-card {
@@ -1902,7 +1825,7 @@
 
 .rec-card {
     text-align: left;
-    max-width: 16rem;
+    max-width: 22rem;
     padding: 0 15px!important
 }
 
@@ -1938,7 +1861,19 @@
 
 .rec-info {
     margin-top: 5px;
-    padding: 0 0 10px
+    padding: 0 0 10px;
+    min-height: 4rem;
+}
+
+.rec-search {
+    width: 75%;
+    float: left;
+    margin-top: 1rem;
+}
+
+.rec-search-button {
+    float: left;
+    margin-top: 1rem;
 }
 
 .rec-info a {
@@ -1946,7 +1881,7 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
 }
 
 .rec-info a:hover {
@@ -2036,7 +1971,6 @@
 
 .yl-card {
     text-align: left;
-    max-width: 16rem;
     padding: 0 15px!important
 }
 
@@ -2341,7 +2275,7 @@
 }
 
 .tag[data-v-0a93a2c4] {
-    max-width: 60rem;
+    max-width: 20rem;
     margin: 0 auto;
     padding: 1rem .5rem
 }
@@ -2353,8 +2287,8 @@
 .tag .items .tag[data-v-0a93a2c4] {
     vertical-align: middle;
     cursor: pointer;
-    margin: .5rem .5rem .2rem;
-    padding: .4rem .7rem;
+    margin: .4rem .4rem .2rem;
+    padding: .3rem .6rem;
     display: inline-flex;
     border-radius: .2rem;
     background: #fff;
@@ -2492,10 +2426,6 @@
     .home[data-v-029c438f] {
         width: 90%
     }
-}
-
-.card.github-card[data-v-47f47b8e] {
-    display: none
 }
 
 .zynews[data-v-47f47b8e] {
@@ -3520,25 +3450,15 @@ th {
 }
 
 .main {
-    padding: 0!important;
-    margin: 4rem auto 5rem!important;
+    width: 60%;
+    padding: 1rem;
+    margin: 0 auto;
     display: flex;
     align-content: flex-start
 }
 
 .layout-inner {
-    width: 43rem
-}
-
-@media (max-width:960px) {
-    .main {
-        padding: .5rem 0;
-        display: block
-    }
-    .layout-inner,
-    .main {
-        width: 100%
-    }
+    width: 100%
 }
 
 .theme.sidebar-open .sidebar-mask {
@@ -3553,12 +3473,6 @@ th {
     width: 100vw;
     height: 100vh;
     display: none
-}
-
-.main {
-    width: 1000px;
-    padding: 1rem;
-    margin: 0 auto
 }
 
 .layout-container {
@@ -3702,14 +3616,6 @@ th {
     color: #2c3e50!important
 }
 
-.pagination-prev {
-    float: left
-}
-
-.pagination-next {
-    float: right
-}
-
 .pagination-current {
     font-weight: 700;
     color: #1c94e0
@@ -3753,10 +3659,6 @@ th {
     box-sizing: border-box;
     margin: 0 auto 10px;
     padding: 0 24px
-}
-
-.card.github-card {
-    padding: 0
 }
 
 .article-card-line {
