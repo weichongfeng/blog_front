@@ -35,20 +35,24 @@
               </a>
               <ul class="nav-dropdown" style="display:none;">
                 <li class="dropdown-item">
-                  <!---->
-                  <a href="/zaobao/" class="nav-link">PHP</a>
+                  <router-link :to="{name:'category',params:{id:1}}">
+                    PHP
+                  </router-link>
                 </li>
                 <li class="dropdown-item">
-                  <!---->
-                  <a href="/recommended/" class="nav-link">Linux</a>
+                  <router-link :to="{name:'category',params:{id:2}}">
+                    Linux
+                  </router-link>
                 </li>
                 <li class="dropdown-item">
-                  <!---->
-                  <a href="/clouds/" class="nav-link">Python</a>
+                   <router-link class="nav-link" :to="{name:'category',params:{id:3}}">
+                     Python
+                   </router-link>
                 </li>
                 <li class="dropdown-item">
-                  <!---->
-                  <a href="/typhoon/" class="nav-link">其他</a>
+                  <router-link :to="{name:'category',params:{id:4}}">
+                    其他
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -57,10 +61,9 @@
             <a href="https://github.com/weichongfeng/" target="_blank" class="nav-link">GitHub</a>
           </li>
           <li class="nav-item">
-            <a href="/leave_msg/" class="nav-link">关于</a>
-          </li>
-          <li class="nav-item">
-            <a href="/leave_msg/" class="nav-link">留言</a>
+            <router-link class="nav-link" :to="{name:'about'}">
+              关于
+            </router-link>
           </li>
         </ul>
       </nav>

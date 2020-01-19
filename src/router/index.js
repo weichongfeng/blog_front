@@ -14,6 +14,18 @@ const routes = [{
         name: 'blog',
         component: () =>
             import ('@components/MainContent.vue')
+    },
+    {
+        path: '/category/:id',
+        name: 'category',
+        component: MainList
+
+    },
+    {
+        path: '/about',
+        name: 'about',
+        component: () =>
+            import ('@components/MainContent.vue')
     }
 ]
 

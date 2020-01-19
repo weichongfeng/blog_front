@@ -12,7 +12,7 @@
             class="tag"
             :style="getRbg()"
             data-v-0a93a2c4
-            v-for="item of tags"
+            v-for="item of list"
             :key="item.id"
           >{{item.name}}</span>
         </div>
@@ -22,30 +22,12 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   name: "MainTags",
-  data() {
-    return {
-      tags: []
-    };
+  props: {
+    list: Array
   },
   methods: {
-    getTags() {
-      axios
-        .get("/api/tag.json")
-        .then(res => {
-          const data = res.data;
-          console.log(data);
-          if (data.ret && data.data) {
-            this.tags = data.data;
-          }
-        })
-        .catch(error => {
-          console.log(error);
-          this.$message.error("网络请求出错!");
-        });
-    },
     getRbg() {
       return {
         'background-color':
@@ -58,9 +40,6 @@ export default {
           ")"
       };
     }
-  },
-  mounted() {
-    this.getTags();
   }
 };
 </script>

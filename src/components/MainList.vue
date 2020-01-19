@@ -53,8 +53,13 @@ export default {
   },
   methods: {
     getBlogList() {
+      console.log(12)
       axios
-        .get("/api/blog.json")
+        .get("/api/blog.json",{
+          params: {
+            category: 1
+          }  
+        })
         .then(res => {
           const data = res.data;
           if (data.ret && data.data) {
@@ -79,6 +84,13 @@ export default {
   },
   mounted() {
     this.getBlogList();
+  },
+  watch: {
+    '$route' () {
+      // console.log(to)
+      // console.log(from)
+      this.getBlogList()
+    }
   }
 };
 </script>
